@@ -9,13 +9,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class OrderServiceImpl extends BaseServiceImpl implements OrderMapper {
+public class OrderServiceImpl<T> implements OrderService {
 
     @Autowired
     OrderMapper orderMapper;
 
     @Override
-    public List<Order> selectAll() {
-        return null;
+    public List<Order> selectList() {
+        return orderMapper.selectMore();
+        //return orderMapper.selectList();
     }
 }

@@ -17,31 +17,39 @@
 
 package com.tantanwen.mybatistk.entity;
 
+import org.apache.ibatis.type.JdbcType;
+import tk.mybatis.mapper.annotation.ColumnType;
+
+import javax.persistence.Column;
+import javax.persistence.Table;
 import java.io.Serializable;
 
+@Table(name = "t_order")
 public class Order implements Serializable {
-    
+
     private static final long serialVersionUID = 661434701950670670L;
-    
-    private long orderId;
-    
-    private int userId;
-    
+    @Column(name = "order_id")
+    @ColumnType(jdbcType = JdbcType.INTEGER)
+    private Long orderId;
+    @Column(name = "user_id")
+    @ColumnType(jdbcType = JdbcType.INTEGER)
+    private Integer userId;
+    @Column(name = "status")
     private String status;
     
-    public long getOrderId() {
+    public Long getOrderId() {
         return orderId;
     }
     
-    public void setOrderId(final long orderId) {
+    public void setOrderId(final Long orderId) {
         this.orderId = orderId;
     }
     
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
     
-    public void setUserId(final int userId) {
+    public void setUserId(final Integer userId) {
         this.userId = userId;
     }
     

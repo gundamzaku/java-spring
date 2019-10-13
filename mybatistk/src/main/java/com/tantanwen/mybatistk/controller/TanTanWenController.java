@@ -18,9 +18,10 @@ public class TanTanWenController {
     @Autowired
     private OrderService orderService;
 
-    @RequestMapping("/getOrderAll")
+    @RequestMapping("/getOrderList")
     public List<Order> getOrderAll() {
-        return orderService.selectAll();
+        List<Order> res = orderService.selectList();
+        return res;
     }
 
     /*

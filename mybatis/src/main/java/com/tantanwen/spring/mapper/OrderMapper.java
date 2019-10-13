@@ -12,4 +12,5 @@ public interface OrderMapper<T> extends Mapper {
      * @return list of entity
      */
     List<T> selectAll();
+    List<T> selectMore();
 }
