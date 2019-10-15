@@ -11,6 +11,8 @@
     <modules>
         <module>mybatis</module>
         <module>mybatistk</module>
+        <module>mybatissharding</module>
+        <module>kafka</module>
     </modules>
 
 </project>
