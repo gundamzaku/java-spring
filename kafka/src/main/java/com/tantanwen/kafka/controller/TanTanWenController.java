@@ -19,7 +19,7 @@ public class TanTanWenController {
 
     @RequestMapping("/getKafaInfo")
     public void getKafaInfo() {
-        ListenableFuture res = this.kafkaTemplate.send("topic.quick.demo", "this is my first demo");
+        ListenableFuture res = this.kafkaTemplate.send("test", "this is my first demo");
         System.out.println(res);
         //this.template.send("topic1", new Foo1(what));
     }

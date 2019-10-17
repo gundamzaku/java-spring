@@ -11,7 +11,7 @@ public class DemoListener {
     private static final Logger log= LoggerFactory.getLogger(DemoListener.class);
 
     //声明consumerID为demo，监听topicName为topic.quick.demo的Topic
-    @KafkaListener(id = "demo", topics = "topic.quick.demo")
+    @KafkaListener(id = "demo", topics = "test")
     public void listen(String msgData) {
         log.info("demo receive : "+msgData);
     }

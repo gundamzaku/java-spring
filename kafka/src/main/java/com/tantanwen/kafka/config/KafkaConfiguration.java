@@ -15,8 +15,8 @@ import org.springframework.kafka.core.*;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Configuration
-//@EnableKafka
+@Configuration
+@EnableKafka
 public class KafkaConfiguration {
 
     //ConcurrentKafkaListenerContainerFactory为创建Kafka监听器的工程类，这里只配置了消费者
@@ -70,7 +70,7 @@ public class KafkaConfiguration {
     private Map<String, Object> senderProps (){
         Map<String, Object> props = new HashMap<>();
         //连接地址
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "149.129.114.180:9092");
         //重试，0为不启用重试机制
         props.put(ProducerConfig.RETRIES_CONFIG, 1);
         //控制批处理大小，单位为字节
